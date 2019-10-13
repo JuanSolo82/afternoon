@@ -1,0 +1,36 @@
+
+<ion-content>
+	<form [formGroup]="loginForm">
+	<ion-card style="margin-top: 50px;">
+		<ion-card-header>
+			<ion-card-subtitle>Ingreso</ion-card-subtitle>
+			<ion-card-title>Inglés técnico</ion-card-title>
+			</ion-card-header>
+		<ion-item>
+			<ion-label position="floating">email</ion-label>
+			<ion-input formControlName="email" [(ngModel)]="email"></ion-input>
+			<div class="error-messages">
+				<ng-container *ngFor="let error of error_messages.email">
+					<div class="error-messages" *ngIf="loginForm.get('email').hasError(error.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+						{{ error.message }}
+					</div>
+				</ng-container>
+			</div>
+		</ion-item>
+		<ion-item>
+			<ion-label position="floating">password</ion-label>
+			<ion-input formControlName="password" type="password" [(ngModel)]="password"></ion-input>
+			<div class="error-messages">
+					<ng-container *ngFor="let error of error_messages.password">
+						<div class="error-messages" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+							{{ error.message }}
+						</div>
+					</ng-container>
+				</div>
+		</ion-item>
+		<ion-item>
+			<ion-button (click)="OnSubmitLogin()" [disabled]="!loginForm.valid" fill="outline">Ingresar</ion-button>
+		</ion-item>
+	</ion-card>
+	</form>
+</ion-content>
