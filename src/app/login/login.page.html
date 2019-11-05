@@ -8,7 +8,7 @@
 			</ion-card-header>
 		<ion-item>
 			<ion-label position="floating">email</ion-label>
-			<ion-input formControlName="email" [(ngModel)]="email"></ion-input>
+			<ion-input formControlName="email" [(ngModel)]="email" value="juan.marinan@outlook.com"></ion-input>
 			<div class="error-messages">
 				<ng-container *ngFor="let error of error_messages.email">
 					<div class="error-messages" *ngIf="loginForm.get('email').hasError(error.type) && (loginForm.get('email').dirty || loginForm.get('email').touched)">
@@ -19,7 +19,7 @@
 		</ion-item>
 		<ion-item>
 			<ion-label position="floating">password</ion-label>
-			<ion-input formControlName="password" type="password" [(ngModel)]="password"></ion-input>
+			<ion-input formControlName="password" type="password" [(ngModel)]="password" value="juansolo.1982"></ion-input>
 			<div class="error-messages">
 					<ng-container *ngFor="let error of error_messages.password">
 						<div class="error-messages" *ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
