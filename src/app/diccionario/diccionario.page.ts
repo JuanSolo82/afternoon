@@ -5,14 +5,12 @@ import { Component, OnInit } from '@angular/core';
 	templateUrl: './diccionario.page.html'
 })
 export class DiccionarioPage implements OnInit {
+	
 	constructor() { }
 	ngOnInit() {}
-	termino;
-	user = {
-		primer_nombre: 'Juan',
-		segundo_nombre: 'Alberto'
-	}
+	termino:string;
 	buscar(){
-		console.log('Termino: '+(this.termino));
+		if (!this.termino.length)
+			console.log("Debe ingresar término");
 	}
 }

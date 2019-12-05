@@ -1,13 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Diccionario</ion-title>
-  </ion-toolbar>
+	<ion-toolbar>
+		<ion-grid>
+			<ion-row>
+				<ion-col>
+					<ion-button fill='outline' color='dark' [routerLink]="['/home']"><ion-icon name="arrow-back"></ion-icon></ion-button>
+				</ion-col>
+				<ion-col>
+					Buscador
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</ion-toolbar>
 </ion-header>
 
 <ion-content>
 	<ion-list>
 		<ion-item>
-			<ion-label>Input</ion-label>
+			<ion-label position="floating"><i>Término</i></ion-label>
 			<ion-input [(ngModel)]='termino'></ion-input>
 		</ion-item>
 		<ion-item>
