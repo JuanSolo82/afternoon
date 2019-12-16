@@ -45,7 +45,6 @@ export class LoginPage implements OnInit {
 	}
 
 	OnSubmitLogin(){
-		console.log("funcion");
 		this.authService.login(this.email, this.password).then(res => {
 			this.router.navigate(['/home']);
 		}).catch(err => console.error("error"));
